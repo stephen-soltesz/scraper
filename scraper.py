@@ -69,7 +69,7 @@ class NonRecoverableScraperException(ScraperException):
 # multi-hour bucket or two.  The precise choice of bucket values below is a
 # compromise between exponentially-sized bucket growth and a desire to make
 # sure that the bucket sizes are nice round time units.
-TIME_BUCKETS = (1.0, 2.0, 5.0, 10.0, 30.0, 60.0, 120.0, 300.0, 600.0,
+TIME_BUCKETS = (0.0, 1.0, 2.0, 5.0, 10.0, 30.0, 60.0, 120.0, 300.0, 600.0,
                 1800.0, 3600.0, 7200.0, float('inf'))
 
 # These are the quantities monitored by prometheus
